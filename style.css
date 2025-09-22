@@ -1,0 +1,102 @@
+body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #141E30, #243B55);
+      color: #fff;
+      overflow-x: hidden;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    /* Navbar */
+    .navbar {
+      transition: background 0.5s;
+    }
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      perspective: 1000px;
+      color: #fff;
+    }
+    .hero-content {
+      backdrop-filter: blur(5px);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 20px;
+      animation: fadeInDown 2s ease;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Destinations */
+    .card {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: transform 0.5s, box-shadow 0.5s;
+      transform-style: preserve-3d;
+      color: #fff;
+    }
+    .card:hover {
+      transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,255,200,0.6);
+    }
+
+    /* Counters */
+    .counter {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background: #f4f4f4;
+      color: #222;
+    }
+    .dark-mode .card {
+      background: #fff;
+      color: #222;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .dark-mode .hero-content {
+      background: rgba(255,255,255,0.7);
+      color: #111;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 50px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
